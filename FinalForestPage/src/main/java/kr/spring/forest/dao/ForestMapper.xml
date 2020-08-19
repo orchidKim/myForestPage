@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="kr.spring.forest.dao.ForestMapper">   
+	
+	<select id="selectRowCount" parameterType="map" resultType="integer">
+		SELECT COUNT(*) FROM placedata
+		<where>
+			<if test="keyword!='' and keyfield=='p_load'">
+				p_load LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='p_name'">
+				p_name LIKE '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select> 
+	
+		<select id="selectList" parameterType="map" resultType="forestVO">
+ 		SELECT
+ 			*
+ 		FROM (SELECT
+ 				a.*,
+ 				rownum rnum
+ 			FROM (SELECT
+ 					*
+ 				FROM placedata 
+ 				<where>
+					<if test="keyword!='' and keyfield=='p_load'">
+						p_load LIKE '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword!='' and keyfield=='p_name'">
+						p_name LIKE '%' || #{keyword} || '%'
+					</if>
+				</where>
+ 				 ORDER BY p_num DESC)a)
+ 		<![CDATA[
+ 			WHERE rnum >= #{start} AND rnum <= #{end}
+ 		]]>		
+ 	</select>
+</mapper>

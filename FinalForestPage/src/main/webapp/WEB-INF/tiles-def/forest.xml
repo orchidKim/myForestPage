@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="forestList" extends="main">
+		<put-attribute name="title" value="휴양림 목록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/forest/forestList.jsp" />
+	</definition>
+
+	<definition name="forestDetail" extends="main">
+		<put-attribute name="title" value="휴양림 상세" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/forest/forestDetail.jsp" />
+	</definition>
+
+	<definition name="adminList" extends="main">
+		<put-attribute name="title" value="관리자 페이지" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/adminList.jsp" />
+	</definition>
+	
+	<definition name="adminForestList" extends="main">
+		<put-attribute name="title" value="휴양림 목록(관리자)" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/adminForestList.jsp" />
+	</definition>
+	
+	<definition name="forestInsert" extends="main">
+		<put-attribute name="title" value="새 휴양림 등록" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/forestInsert.jsp" />
+	</definition>
+	
+	<definition name="forestUpdate" extends="main">
+		<put-attribute name="title" value="휴양림 정보 수정" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/forestUpdate.jsp" />
+	</definition>
+
+
+</tiles-definitions>
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<definition name="adminQuestAnswerList" extends="main">
+       <put-attribute name="title" value="Admin QnA List"/> 
+       <put-attribute name="body" value="/WEB-INF/views/adminQna/adminQuestAnswerList.jsp"/>
+    </definition>
+    <!-- <definition name="questAnswerWrite" extends="main">
+       <put-attribute name="title" value="QnA 글쓰기"/> 
+       <put-attribute name="body" value="/WEB-INF/views/qna/questAnswerWrite.jsp"/>
+    </definition> -->
+    <definition name="adminQuestAnswerDetail" extends="main">
+       <put-attribute name="title" value="QnA 게시판 상세 정보"/> 
+       <put-attribute name="body" value="/WEB-INF/views/adminQna/adminQuestAnswerDetail.jsp"/>
+    </definition>
+  <!--   <definition name="questAnswerModify" extends="main">
+       <put-attribute name="title" value="QnA 게시판 글 수정"/> 
+       <put-attribute name="body" value="/WEB-INF/views/qna/questAnswerModify.jsp"/>
+    </definition>  -->
+</tiles-definitions>       

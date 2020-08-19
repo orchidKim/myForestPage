@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.adminQuestAnswer.dao.AdminQuestAnswerMapper">
+
+	<select id="selectRowCount" parameterType="map" resultType="integer">
+	 		SELECT COUNT(*) FROM qna q JOIN member m 
+	 		ON q.mem_num = m.mem_num
+	 		<where>
+				<if test="keyword != '' and keyfield == 'q_title'">
+					q.q_title LIKE '%' || #{keyword} || '%'
+				</if>
+				<if test="keyword != '' and keyfield == 'id'">
+					m.id LIKE '%' || #{keyword} || '%'
+				</if>
+				<if test="keyword != '' and keyfield == 'question'">
+					q.question LIKE '%' || #{keyword} || '%'
+				</if>
+		</where>
+	</select>
+
+	<select id="selectList" parameterType="map" resultType="questAnswerVO">
+	SELECT * FROM (
+	 			SELECT a.*, rownum rnum FROM(
+	 				SELECT * FROM qna q JOIN member m 
+	 					ON q.mem_num = m.mem_num 
+	 					<where>
+							<if test="keyword != '' and keyfield == 'q_title'">
+								q.q_title LIKE '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'id'">
+								m.id LIKE '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'question'">
+								q.question LIKE '%' || #{keyword} || '%'
+							</if>
+						</where>
+	 					ORDER BY q.q_num DESC)a)
+	 					<![CDATA[
+	                    WHERE rnum >= #{start} AND rnum <= #{end}
+	                    ]]>
+	</select>
+	
+	<update id="updateInsert" parameterType="questAnswerVO">
+ 		UPDATE qna SET
+	 		answer=#{answer},
+	 		a_reg_date=SYSDATE
+	 	WHERE q_num=#{q_num}	
+ 	</update>
+ 	
+ 	<update id="updateUpdate" parameterType="questAnswerVO">
+ 		UPDATE qna SET
+	 		answer=#{answer},
+	 		a_modify_date=SYSDATE
+	 	WHERE q_num=#{q_num}	
+ 	</update>
+</mapper>

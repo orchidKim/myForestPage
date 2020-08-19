@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="bookVisitDay" extends="main">
+		<put-attribute name="title" value="휴양림 방문 예약 날짜 지정" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/visit/bookVisitDay.jsp" />
+	</definition>
+	
+	<definition name="myBookList" extends="main">
+		<put-attribute name="title" value="나의 방문예약 휴양림 리스트" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/visit/myBookList.jsp" />
+	</definition>
+	
+	
+
+
+</tiles-definitions>
+
+
+
+
+
+
+
+

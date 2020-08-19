@@ -1,0 +1,673 @@
+@CHARSET "UTF-8";
+
+
+
+
+
+
+/*---------------------- boardList start---------------------*/
+div#main_body .boardList-table{
+   width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+div#main_body .boardList-table th,div#main_body .boardList-table th td{
+   border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+div#main_body .boardList-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/*---------------------- boardList end---------------------*/
+
+/*---------------------- boardView start---------------------*/
+
+
+div#main_body .boardView-table{
+	width:1200px;margin:0 auto;overflow:hidden;
+	table-layout:fixed;word-wrap: break-word;
+}
+div#main_body .boardView-table tr th{
+	 width:200px; 
+}
+
+
+
+/*---------------------- boardView end---------------------*/
+
+
+
+/*---------------------- forestList start ---------------------*/
+
+/* #selectLoc{
+	width: 150px;
+} */
+
+/*---------------------- forestList end---------------------*/
+
+/*---------------------- forestDetail start ---------------------*/
+
+#map{
+	float: left;
+}
+
+.forestDetail-table{
+	float:right;
+	width: 550px;
+	margin-right: 10px;
+	font-size: 10px;
+}
+
+.forestDetail-table tr{
+	/* float: right; */
+}
+
+
+/*---------------------- forestList start---------------------*/
+
+#selectLocForm{
+	float: right;
+}
+
+.selectBox{
+	float: right;
+}
+
+#forest-list tr{
+	height: 50px;
+	border-left: none;
+}
+
+#forest-list th{
+	background: lightgray;
+}
+
+/*---------------------- forestDetail start ---------------------*/
+
+/* #selectMonthDayForm{
+	width: 630px;
+} */
+.page-main-style .forestDetail-sub form{
+	width:560px; padding:20px; background:none;
+}
+#main_body .forestDetail-table{
+	width: 100%;margin-bottom:70px;
+	font-size: 14px; border:1px solid #dadada;box-sizing:border-box;
+}
+#forestDetail-table-th{
+	padding:20px 0;
+	background: #f3f6f7;
+}
+.forestDetail-table tr th h3{
+	text-align: center;
+}
+.forestDetail-sub .forestDetail-book{
+	float: left;padding:10px 0 20px 0;
+}
+#forestDetail-myComments{
+	width: 100%;
+}
+.forestDetail-sub #map{
+	float: right;width:550px;height:262px;
+	/* margin-right: 30px; */z-index:1;margin:10px 0 20px 0;
+	
+}
+.forestDetail-comments-table{
+	width:1200px;margin:0 auto;overflow:hidden;
+	table-layout:fixed;word-wrap: break-word;
+}
+.forestDetail-comments-table tr{
+	height: 20px;
+}
+.forestDetail-comments-table th{
+	background: #e8eaed;/* width:200px;  */
+}
+.forestDetail-comments-table td{
+	font-size: 14px;
+}
+
+/*관리자 댓글관리 테이블*/
+div.page-main-style #comment_table{
+	table-layout: fixed;
+    word-wrap: break-word;
+}
+div.page-main-style #comment_table .comment_content{
+	width:650px;
+}
+
+
+
+
+div.page-main-style .forestDetail-comments-table #comment_delete{
+	 width:80px;background:none;height:25px;line-height:25px;
+	color:#888;float:right;text-decoration:underline;font-weight:bold;
+}
+div.page-main-style .forestDetail-comments-table #comment_delete:hover{
+	color:#222;
+}
+
+/*---------------------- forestList start---------------------*/
+
+#selectLocForm{
+	float: right;
+}
+
+.selectBox{
+	float: right;
+}
+
+#forest-list tr{
+	height: 50px;
+	border-left: none;
+}
+
+#forest-list th{
+	background: lightgray;
+}
+
+/*---------------------- forestView end ---------------------*/
+
+/*---------------------- bookVisitDay start---------------------*/
+
+#insertVisitForm{
+	width: 800px;
+	height: 100px;
+	padding: 20px;
+	text-align: center;
+}
+
+#insertVisitForm span{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 30px;
+}
+
+.bookVisitDay-table{
+	width: 840px;
+	margin: 10px auto 0 auto;
+}
+.bookVisitDay-table td{
+	width:50%;
+}
+
+.bookVisitDay-table tr{
+	height: 50px;
+}
+
+#v_cnt, #date{
+	height: 40px;
+}
+
+#submit-btn{
+	width:60%;
+	font-size:16px;
+	color:white;
+	font-weight:bold;
+	height:50px;
+	background:#4d540e;
+}
+
+/*---------------------- bookVisitDay end ---------------------*/
+
+/*---------------------- myBookList start ---------------------*/
+
+.myBookList-table th{
+    border-bottom: 1.5px solid #036;
+}
+
+.myBookList-table td{
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*---------------------- memberView start---------------------*/
+/*---------------------- admin member start ----------------------*/
+#authBox{
+	width:10%;
+    background-color: #4d540e;
+    border: none;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px;
+    cursor: pointer;
+    animation:changecolor 5s infinite;
+	 }
+	 
+#authBox:hover{
+	background:#3a3f09
+}
+	
+/*----------------------admin member end----------------------*/
+.memberView-title{
+	height: 70px;
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.memberView-table{
+	width: 100%;
+/* 	margin: 0 auto; */
+	/* border: 2px solid gray; */
+	border-left: none;
+	border-right: none;
+}
+
+.memberView-table tr{
+	height: 50px;
+}
+
+.memberView-table th{
+	background: #f3f6f7;
+}
+
+.memberView-table td{
+	background: white;
+}
+
+.memberView-btn{
+	text-align: center; 
+	margin:30px auto 0 auto;
+}
+
+.memberView-btn input{
+	/* padding: 10 20 10 20; */
+	/* color: white; */
+	/* font-weight: bold; */
+	/* background: #4d540e; */
+}
+
+#memberView-btn1{
+	/* margin-right: 40px; */
+}
+
+/*---------------------- memberView end---------------------*/
+
+/*---------------------- myPickList start---------------------*/
+
+#myPickList-title{
+	height: 70px;
+}
+
+.myPickList-table{
+	width: 840px;
+	margin: 0 auto;
+}
+
+.myPickList-table tr{
+	height:50px;
+}
+
+.myPickList-table tr td a{
+	height:36px;
+	display:inline-block;line-height:36px;
+}
+#myPick-btn{
+	/* float:right; *//* margin-right:20px; */
+	width:100px;
+	margin:0 auto;
+	/* height:30px; */
+	/* margin-left:30px; */
+	/* background:#4d540e;
+	color:white; */
+	/* font-weight:bold; */
+}
+
+
+/*---------------------- myPickList end---------------------*/
+
+/*---------------------- myBookList start---------------------*/
+
+#myBookList-title{
+	height: 70px;
+}
+
+.myBookList-table{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.myBookList-table tr{
+	height: 70px;
+}
+
+.myBookList-table th{
+	background: lightgray;
+}
+
+.myBookList-table td{
+	text-align: center;
+}
+
+#myBook-btn{
+	width:100px;
+	/* height:30px; */
+	background:#4d540e;
+	color:white;
+	font-weight:bold;
+}
+
+
+
+/*---------------------- Q&A start---------------------*/
+
+
+div#main_body .qna-table{
+   width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+div#main_body .qna-table th,div#main_body .qna-table th td{
+   border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+div#main_body .qna-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+/* div#main_body #search_form_qna{
+	input{float:left;}
+	select{float:left;}
+} */
+/*---------------------- Q&A detail start ---------------------*/
+
+.qna-detail-mainTable tr{
+   height: 20px;
+}
+.qna-detail-mainTable td{
+   text-align: left;
+}
+#qna-question{
+   height: 300px;
+   font-size: 14px;
+   overflow-y:scroll; 
+   width:100%;
+}
+
+.qna-detail-subTable tr{
+   height: 10px;
+}
+
+.qna-detail-subTable{
+   word-wrap: break-word;table-layout:fixed
+}
+.qna-detail-subTable .answer_area{
+	width:600px;
+}
+
+/*---------------------- Q&A detail end ---------------------*/
+
+/*---------------------- Q&A write ---------------------*/
+#qna-write-question{
+   width:100%;
+   height: 300px;
+   overflow-y:scroll;
+}
+#q_title{
+   width:100%;
+} 
+.qna-write-mainTable{
+   border:1px solid lightgray
+}
+.qna-align-right{
+	margin:0px;
+	text-align:right;
+	font-size:12px;
+}
+/* div.page-main-style #qna-list-div {
+		margin: 0 0 5px 0;
+} */
+div.page-main-style #qna-list-div {
+	float:right;margin:0 auto;
+}
+/*---------------------- Q&A write end---------------------*/
+
+/* Q&A modify start */
+
+div.page-main-style #modify_form{
+   width:90%; margin:0 auto;
+   font-size:15px;padding:50px 20px;
+   border-radius:10px;
+}
+div.page-main-style p.qna-p{
+   margin:0 auto;
+}
+div.page-main-style p #qna-write-question{
+   margin:0 auto;
+}
+div.page-main-style p.qna-p label{
+   height:10px;
+}
+
+/*---------------------- Q&A modify end ----------------------*/
+
+
+
+
+/*---------------------- admin Q&A start ----------------------*/
+#adminQna_quest{
+	word-wrap: break-word;
+}
+
+
+
+/*---------------------- admin Q&A end ----------------------*/
+
+
+
+
+
+/*---------------------- Q&A end---------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------- 관리자 메인 페이지---------------------*/
+div.page-main-style .admin_main{
+	margin-top:20px;
+	text-align:center;box-sizing:border-box;
+	font-size:18px; border:1px solid #dadada;
+	/* width:100%;height:100%;margin:0 auto; */
+}
+div.page-main-style  .admin_main img{
+	padding:80px 0 20px 0;
+	width:300px;margin:0 auto;
+}
+div.page-main-style  .admin_main p{
+	margin-bottom:50px;
+}
+
+
+
+
+
+
+/* ==============로그아웃시  찜태그 스타일 시작================== */
+
+#iaposition{
+/* 	border : 1px solid red;
+	margin: 0 auto; */
+}
+
+#logoutPick {
+  /* position: absolute; */
+  margin: 0 auto;
+  display:block;
+  width: 16em;
+  height: 1em;
+  line-height: 1em;
+  transform: translateY(-50%);
+  color: white;
+  background: #4d540e;
+  font-size: 1.5em;
+  padding: .6em;
+  padding-left: 8em;
+  text-decoration: none;
+  border-radius: .7em;
+  overflow: hidden;
+  transition: all .2s cubic-bezier(.41,0,.59,1.44);
+}
+#logoutPick:hover, #logoutPick:focus {
+  width: 17em;
+}
+#logoutPick span {
+  transition: all .2s cubic-bezier(.41,0,.59,1.44);
+}
+.optext {
+  position: absolute;
+  transform: none;
+}
+#logoutPick:hover .optext, #logoutPick:focus .optext {
+  transform: translateY(2em);
+}
+.oph-text {
+  position: absolute;
+  left: 2em;
+  transform: translateY(-2em);
+}
+#logoutPick:hover .oph-text, #logoutPick:focus .oph-text {
+  transform: none;
+}
+
+.oplike {
+  position: absolute;
+  background: white;
+  color: #4d540e;
+  padding: .2em .2em .1em;
+  font-size: .5em;
+  border-radius: .4em;
+  border-top-left-radius: 0;
+  left: 10px;
+  transform: translateY(4em);
+}
+.oplike:after {
+  content: "";
+  width: 25%;
+  height: 30%;
+  background: #4d540e;
+  border-radius: .2em .2em 0 0;
+  position: absolute;
+  left: 0;
+  top: -30%;
+}
+#logoutPick:hover .oplike, #logoutPick:focus .oplike {
+  transform: none;
+}
+.opfb {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  left: 20px;
+  transform: none;
+}
+#logoutPick:hover .opfb, #logoutPick:focus .opfb {
+  transform: translateY(-2em);
+}
+
+/* ==============로그아웃시  찜태그 스타일 끝================== */
+
+
+
+/* ==============로그인시  찜태그 스타일 시작================== */
+
+#iaposition{
+/* 	border : 1px solid red;
+	margin: 0 auto; */
+}
+
+#loginPick {
+  /* position: absolute; */
+  margin: 0 auto;
+  display:block;
+  width: 15em;
+  height: 1em;
+  line-height: 1em;
+  transform: translateY(-50%);
+  color: white;
+  background: #4d540e;
+  font-size: 1.5em;
+  padding: .6em;
+  padding-left: 8em;
+  text-decoration: none;
+  border-radius: .7em;
+  overflow: hidden;
+  transition: all .2s cubic-bezier(.41,0,.59,1.44);
+}
+#loginPick:hover, #loginPick:focus {
+ width: 17em;
+}
+#loginPick span {
+  transition: all .2s cubic-bezier(.41,0,.59,1.44);
+}
+.iptext {
+  position: absolute;
+  transform: none;
+}
+#loginPick:hover .iptext, #loginPick:focus .iptext {
+  transform: translateY(2em);
+}
+.iph-text {
+  position: absolute;
+  left: 2em;
+  transform: translateY(-2em);
+}
+#loginPick:hover .iph-text, #loginPick:focus .iph-text {
+  transform: none;
+}
+
+.iplike {
+  position: absolute;
+  background: white;
+  color: #4d540e;
+  padding: .2em .2em .1em;
+  font-size: .5em;
+  border-radius: .4em;
+  border-top-left-radius: 0;
+  left: 10px;
+  transform: translateY(4em);
+}
+.iplike:after {
+  content: "";
+  width: 25%;
+  height: 30%;
+  background: #4d540e;  
+  border-radius: .2em .2em 0 0;
+  position: absolute;
+  left: 0;
+  top: -30%;
+}
+#loginPick:hover .iplike, #loginPick:focus .iplike {
+  transform: none;
+}
+.ipfb {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  left: 20px;
+  transform: none;
+}
+#loginPick:hover .ipfb, #loginPick:focus .ipfb {
+  transform: translateY(-2em);
+}
+
+/* ==============로그아웃시  찜태그 스타일 끝================== */
+
+
+
+
+
+
+
+

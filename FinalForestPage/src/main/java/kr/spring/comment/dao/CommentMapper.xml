@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="kr.spring.comment.dao.CommentMapper">  
+
+	<select id="selectRowCount" parameterType="map" resultType="integer">
+		SELECT COUNT(*) FROM place_comment 
+		<where>
+			<if test="keyword!='' and keyfield=='p_num'">
+				p_num = #{keyword}
+			</if>
+			<!-- 관리자 페이지에서 후기를 검색할 때 (아이디->회원고유번호, 후기내용, 작성일) -->
+			<if test="keyword!='' and keyfield=='mem_num'">
+				mem_num LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='comments'">
+				comments LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='reg_date'">
+				reg_date LIKE '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select> 
+	
+	<select id="commentList" parameterType="map" resultType="commentVO">
+ 		SELECT
+ 			*
+ 		FROM (SELECT
+ 				a.*,
+ 				rownum rnum
+ 			FROM (SELECT
+ 					*
+ 				FROM place_comment
+ 		<where>
+			<if test="keyword!='' and keyfield=='p_num'">
+				p_num = #{keyword}
+			</if>
+			<!-- 관리자 페이지에서 후기를 검색할 때 (아이디->회원고유번호, 후기내용, 작성일) -->
+			<if test="keyword!='' and keyfield=='mem_num'">
+				mem_num LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='comments'">
+				comments LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='reg_date'">
+				reg_date LIKE '%' || #{keyword} || '%'
+			</if>
+		</where>
+ 				 ORDER BY c_num DESC)a)
+ 		<![CDATA[
+ 			WHERE rnum >= #{start} AND rnum <= #{end}
+ 		]]>		
+ 	</select>  
+ 	
+</mapper>
+
+
+
+
+
+
+

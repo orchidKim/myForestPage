@@ -1,0 +1,109 @@
+
+#canvas {
+	position: relative;
+}
+#domestic {
+	
+}
+
+#domestic>div {
+	border:1px solid #bbb;
+	min-width:70px;
+	position: absolute;
+	padding: 5px;
+	font-size: 14px;
+	/* ������ ���ڻ� */
+	color:rgb(107, 107, 107);
+	text-align: center;
+	/*  ������ ���� */
+	background:#f4f4f4;
+	display: none;
+}
+
+/* ���콺 ������ ���õ� ������ ���ڿ� �Ӽ� */
+#domestic>div h2 {
+	margin: 0;
+	font-size: 13px;
+}
+
+/* ���콺 ������ ���õ� ������  ���ڿ���ġ */
+#seoul {
+	top: 180px;
+	left: 60px;
+}
+
+#gygg {
+	top: 115px;
+	left: 35px;
+}
+
+#incheon {
+	top: 205px;
+	left: 50px;
+}
+
+#gangwon {
+	top: 115px;
+	left: 305px;
+}
+
+#chungbuk {
+	top: 250px;
+	left: 120px;
+}
+
+#chungnam {
+	top: 270px;
+	left: 0px;
+}
+
+#daejeon {
+	top: 350px;
+	left: 98px;
+}
+
+#sejong {
+	top: 305px;
+	left: 98px;
+}
+
+#gwangju {
+	top: 500px;
+	left: 35px;
+}
+
+#jeonbuk {
+	top: 375px;
+	left: 35px;
+}
+
+#jeonnam {
+	top: 470px;
+	left: 10px;
+}
+
+#gyeongbuk {
+	top: 350px;
+	left: 380px;
+}
+
+#gyeongnam {
+	top: 565px;
+	left: 250px;
+}
+
+#daegu {
+	top: 370px;
+	left: 325px;
+}
+
+#busan {
+	top: 530px;
+	left: 380px;
+}
+
+#ulsan {
+	top: 420px;
+	left: 400px;
+}
+#jeju {top:620px; left:80px;}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="memberRegister" extends="main">
+       <put-attribute name="title" value="회원가입"/> 
+       <put-attribute name="body" value="/WEB-INF/views/member/memberRegister.jsp"/>
+    </definition>
+    
+    <definition name="memberLogin" extends="main">
+       <put-attribute name="title" value="회원로그인"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberLogin.jsp"/>
+    </definition>
+    
+    <definition name="memberView" extends="main">
+       <put-attribute name="title" value="회원정보"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberView.jsp"/>
+    </definition>
+    
+    <definition name="memberModify" extends="main">
+       <put-attribute name="title" value="회원정보수정"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberModify.jsp"/>
+    </definition>
+    
+
+    
+    
+    <definition name="memberDelete" extends="main">
+       <put-attribute name="title" value="회원탈퇴"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberDelete.jsp"/>
+    </definition>
+    
+    
+    
+    <definition name="memberFindPasswordId" extends="main">
+       <put-attribute name="title" value="비밀번호찾기"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberFindPasswordId.jsp"/>
+    </definition> 
+    
+    <definition name="memberFindPassword" extends="main">
+       <put-attribute name="title" value="비밀번호찾기"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/member/memberFindPassword.jsp"/>
+    </definition>
+    
+ 
+    
+    
+    <definition name="memberList" extends="main">
+       <put-attribute name="title" value="관리자_회원관리"/> 
+       <put-attribute name="body" 
+       value="/WEB-INF/views/admin/memberList.jsp"/>
+    </definition>
+    
+    
+     
+    
+</tiles-definitions>
+
+
+
+
+
+
+
+

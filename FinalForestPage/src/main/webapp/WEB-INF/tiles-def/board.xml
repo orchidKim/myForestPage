@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- 사용자 -->
+    <definition name="boardList" extends="main">
+       <put-attribute name="title" value="게시판 목록"/> 
+       <put-attribute name="body" value="/WEB-INF/views/board/boardList.jsp"/>
+    </definition>
+    
+    <definition name="boardView" extends="main">
+       <put-attribute name="title" value="게시판 상세"/> 
+       <put-attribute name="body" value="/WEB-INF/views/board/boardView.jsp"/>
+    </definition>
+    
+    <!-- 관리자  -->
+     <definition name="adminBoardList" extends="main">
+       <put-attribute name="title" value="공지사항(관리자)"/> 
+       <put-attribute name="body" value="/WEB-INF/views/admin/adminBoardList.jsp"/>
+    </definition>
+
+   <definition name="adminBoardView" extends="main">
+       <put-attribute name="title" value="게시판 상세 정보(관리자)"/> 
+       <put-attribute name="body" value="/WEB-INF/views/admin/adminBoardView.jsp"/>
+    </definition>
+    
+    <definition name="adminBoardWrite" extends="main">
+       <put-attribute name="title" value="게시판 글 작성(관리자)"/> 
+       <put-attribute name="body" value="/WEB-INF/views/admin/adminBoardWrite.jsp"/>
+    </definition>
+    
+   <definition name="adminBoardModify" extends="main">
+       <put-attribute name="title" value="게시판 글 수정(관리자)"/> 
+       <put-attribute name="body" value="/WEB-INF/views/admin/adminBoardModify.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+
+
+
+
+
+
+
+

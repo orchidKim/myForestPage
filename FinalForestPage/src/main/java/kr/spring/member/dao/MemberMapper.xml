@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="kr.spring.member.dao.MemberMapper">  
+
+	<select id="selectRowCount" parameterType="map" resultType="integer">
+		SELECT COUNT(*) FROM member 
+		<where>
+			<if test="keyword!='' and keyfield=='mem_num'">
+				mem_num LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='mem_id'">
+				id LIKE '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword!='' and keyfield=='mem_auth'">
+				auth LIKE '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select> 
+	
+	
+	
+	<select id="memberList" parameterType="map" resultType="MemberVO">
+ 		SELECT
+ 			*
+ 		FROM (SELECT
+ 				a.*,
+ 				rownum rnum
+ 			FROM (SELECT
+ 					*
+ 				FROM member 
+ 				<where>
+					<if test="keyword!='' and keyfield=='mem_num'">
+						mem_num LIKE '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword!='' and keyfield=='mem_id'">
+						id LIKE '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword!='' and keyfield=='mem_auth'">
+						auth LIKE '%' || #{keyword} || '%'
+					</if>
+				</where>
+ 				 ORDER BY mem_num DESC)a)
+ 		<![CDATA[
+ 			WHERE rnum >= #{start} AND rnum <= #{end}
+ 		]]>		
+ 	</select>  
+ 	
+</mapper>
+
+
+
+
+
+
+

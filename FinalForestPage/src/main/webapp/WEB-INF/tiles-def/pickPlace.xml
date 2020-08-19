@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="myPickList" extends="main">
+       <put-attribute name="title" value="나의 찜 리스트"/> 
+       <put-attribute name="body" value="/WEB-INF/views/pickPlace/myPickList.jsp"/>
+    </definition>
+    
+    <definition name="pickRank" extends="main">
+       <put-attribute name="title" value="찜 TOP 8"/> 
+       <put-attribute name="body" value="/WEB-INF/views/pickPlace/pickRank.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+
+
+
+
+
+
+
+
